@@ -1,0 +1,12 @@
+#
+# Adding the JDBC properties
+#
+server.port=7890
+
+spring.devtools.livereload.enabled=false
+
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_directory?useSSL=false&serverTimezone=UTC
+spring.datasource.username=hbstudent
+spring.datasource.password=hbstudent

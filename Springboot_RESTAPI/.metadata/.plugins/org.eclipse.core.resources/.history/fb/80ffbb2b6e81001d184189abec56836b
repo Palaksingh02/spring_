@@ -1,0 +1,6 @@
+#
+# Adding the JDBC properties
+#
+spring.datasource.url=jdbc:mysql://localhost:3306/employee_directory.employee?useSSL=false&serverTimezone=UTC
+spring.datasource.username=hbstudent
+spring.datasource.password=hbstudent

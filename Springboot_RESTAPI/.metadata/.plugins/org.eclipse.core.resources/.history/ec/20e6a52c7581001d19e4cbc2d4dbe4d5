@@ -1,0 +1,48 @@
+package com.luv2code.springboot.cruddemo.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.luv2code.springboot.cruddemo.entity.Employee;
+
+import jakarta.persistence.EntityManager;
+
+@Repository
+public class EmployeeDAOHiberImp implements EmployeeDAO {
+	//define the field for entity manager and have binded with the desired property
+	@Autowired
+	private EntityManager entityManager;
+	
+	@Override
+	public List<Employee> findALL() {
+		
+		Session currSession = entityManager.unwrap(Session.class);
+		String hql = "from Employee ";
+		Query<Employee> q = currSession.createQuery(hql, Employee.class);
+		System.out.println("hibernate called!");
+		return q.getResultList();
+	}
+
+	@Override
+	public Employee find(int ID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(Employee theEmployee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int ID) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

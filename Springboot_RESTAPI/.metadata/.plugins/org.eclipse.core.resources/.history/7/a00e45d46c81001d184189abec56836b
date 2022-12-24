@@ -1,0 +1,15 @@
+package com.luv2code.springboot.cruddemo.dao;
+
+import java.util.List;
+
+import com.luv2code.springboot.cruddemo.entity.Employee;
+
+public class EmployeeDAOHiberImp implements EmployeeDAO {
+
+	@Override
+	public List<Employee> findALL() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
